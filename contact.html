@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <link rel="stylesheet" type="text/css" href="style/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon/favicon.ico">
+    
+    <title>Travel Agency</title>
+</head>
+
+<body >
+
+    <!-- Header -->
+    <header class="h-30 fixed w-full z-50  shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/giphy.gif" alt="Le globe" id="img-high"><h1 class="text-2xl font-bold">Travel Agency.</h1>
+            </a>
+            <nav class="nav-links hidden md:flex flex-grow justify-center space-x-8">
+                <a href="index.html" class="header text-xl ">Accueil</a>
+                <a href="destinations.html" class="header text-xl">Destinations</a>
+                <a href="circuits.html" class="header text-xl">Circuits</a>
+                <a href="contact.html" class="header text-xl active">Contact</a>
+                <a href="tarifs.html" class="header text-xl">Tarifs</a>
+            </nav>
+            <div class="relative flex items-center flex-grow justify-end w-full md:w-auto md:flex-grow-0">
+                <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 w-full md:w-64 lg:w-80 border rounded-md focus:outline-none focus:ring-2 focus:ring-black-600">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M12 14l-4-4H6a6 6 0 1 1 1.41-1.41l4 4-4 4a1 1 0 0 1-1.41-1.41l4-4zM6 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="menu-icon flex flex-col justify-center items-center cursor-pointer md:hidden ml-4">
+                <div class="w-6 h-1 bg-gray-700 mb-1"></div>
+                <div class="w-6 h-1 bg-gray-700 mb-1"></div>
+                <div class="w-6 h-1 bg-gray-700"></div>
+            </div>
+        </div>
+    </header>
+   
+
+    <!-- Section de contact principal -->
+    <section id="contact-form" class="py-48 ">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Contactez nous</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Formulaire de contact -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Laissez-nous un message</h3>
+                    <p class=" mb-6">Remplissez le formulaire ci-dessous et un membre de notre équipe se fera un plaisir de vous contacter sous peu.</p>
+
+                    <form id="form" method="post" action="soumission.html"  onsubmit="return validateForm()" novalidate>
+
+
+
+                        <div class="mb-4 input-control">
+                            <label for="origine" class="block text-md font-medium">Région d'origine</label>
+                            <select id="origine" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <option value="">Sélectionnez</option>
+                                <option value="Québec">Québec</option>
+                                <option value="Hors Québec">Hors Québec</option>
+                            </select>
+                            <div class="errorMessage"></div>
+                          
+                        </div>
+
+                        <div class="mb-4 input-control">
+                            <label for="branch" class="block text-md font-medium">Succursale</label>
+                            <select id="branch" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <option value="">Sélectionnez</option>
+                                <option value="Jarry">Jarry</option>
+                                <option value="Longueuil">Longueuil</option>
+                            </select>
+                            <div class="errorMessage"></div>
+                        </div>
+
+
+                        <div class="mb-4 input-control">
+                            <label for="agent" class="block text-md font-medium">Conseiller en voyages à contacter (S'il y a lieu)</label>
+                            <select id="agent" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <option value="">Choissez parmi les conseillers disponibles</option>
+                                <option value="Charles Bray">Charles Bray</option>
+                                <option value="Nathalie Roy">Nathalie Roy</option>
+                                <option value="Khadim Seye">Khadim Seye</option>
+                            </select>
+                            <div class="errorMessage"></div>
+                        </div>
+
+                        <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4 input-control">
+                            <div>
+                                <label for="name" class="block text-md font-medium">Votre Nom</label>
+                                <input type="text" id="name" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <div class="errorMessage"></div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-md font-medium">Téléphone</label>
+                                <input type="text" id="phone" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <div class="errorMessage"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4 input-control">
+                            <div>
+                                <label for="email" class="block text-md font-medium">Courriel</label>
+                                <input type="email" id="email" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <div class="errorMessage"></div>
+                            </div>
+                            <div>
+                                <label for="codePostal" class="block text-md font-medium">Code Postal</label>
+                                <input type="text" id="codePostal" class="mt-1 block w-full border border-gray-900 rounded-md p-2">
+                                <div class="errorMessage"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 input-control">
+                            <label for="message" class="block text-md font-medium">Votre Message</label>
+                            <textarea id="message" rows="8" class="mt-1 block w-full border border-gray-900 rounded-md p-2"></textarea>
+                            <div class="errorMessage"></div>
+                        </div>
+
+                        <div class="mb-4 flex items-center">
+                            <input type="checkbox" id="newsletter" class="mr-2">
+                            <label for="newsletter" class="text-md">Inscrivez vous à notre infolettre</label>
+                            
+                        </div>
+                       
+                        <button type="submit" class="button text-white px-6 py-2 rounded-md">Transmettre</button>
+                    </form>
+                </div>
+               
+
+                <!-- Informations de contact -->
+                <div class="space-y-24">
+                    <h3 class="text-2xl font-bold mb-4">Centre d'appel</h3>
+                    <p class=" mb-6">Sans frais : <span class="span font-semibold">1-888-876-5345</span></p>
+                    <p class=" mb-4">N'hésitez pas à nous contacter, du lundi au vendredi entre 9h et 17h, pour toutes questions et/ou commentaires. Notre équipe attend votre appel !</p>
+                    <div class="mb-4">
+                        <h4 class="text-lg font-bold">Heures d'ouverture</h4>
+                        <table class="w-full mt-2">
+                            <tr>
+                                <td class="text-md-600">Lundi au vendredi</td>
+                                <td class="text-md-600 text-right">9h à 17h</td>
+                            </tr>
+                            <tr>
+                                <td class="text-md-600">Samedi</td>
+                                <td class="text-md text-right">Fermé</td>
+                            </tr>
+                            <tr>
+                                <td class="text-md">Dimanche</td>
+                                <td class="text-md text-right">Fermé</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Chat en ligne</h4>
+                        <p class="text-md mb-4">Lundi au vendredi - 9h00 à 17h00.</p>
+                        <a href="contact.html" class="chat hover:underline font-bold">Commencer à discuter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section des heures d'ouverture et de localisation -->
+    <section id="hours-location" class="py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Localisation 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">Station Jarry</h3>
+                    <h4 class="text-lg font-semibold mb-4">Heures d'ouverture à l'agence</h4>
+                    <div class="mb-4">
+                        <h5 class="font-semibold">En Présentiel</h5>
+                        <p class="text-gray-600">Ouvert sur rendez-vous seulement, pour prendre rendez-vous veuillez écrire à <a href="mailto:ardric85@gmail.com" class="chat">ardric85@gmail.com</a></p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-semibold">En ligne</h5>
+                        <p class="text-gray-600">Nous sommes disponibles par téléphone et par courriel du lundi au vendredi de 9h00 à 17h00</p>
+                    </div>
+                    <div class="mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.1391904094394!2d-73.72176682372034!3d45.56763947107581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9222e3a025a47%3A0x8282b238034d174!2s765%20Rue%20Jolivet%2C%20Laval%2C%20QC%20H7S%202L5!5e0!3m2!1sfr!2sca!4v1721923580703!5m2!1sfr!2sca" style="width:100%; height:200px;  border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <!-- Localisation 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-2">Station Longueuil</h3>
+                    <h4 class="text-lg font-semibold mb-4">Heures d'ouverture à l'agence</h4>
+                    <div class="mb-4">
+                        <h5 class="font-semibold">En Présentiel</h5>
+                        <p class="text-gray-600">Ouvert sur rendez-vous seulement, pour prendre rendez-vous veuillez écrire à <a href="mailto:ardric85@gmail.com" class="chat">ardric85@gmail.com</a></p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-semibold">En ligne</h5>
+                        <p class="text-gray-600">Nous sommes disponibles par téléphone et par courriel du lundi au vendredi de 9h00 à 17h00</p>
+                    </div>
+                    <div class="mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.1391904094394!2d-73.72176682372034!3d45.56763947107581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9222e3a025a47%3A0x8282b238034d174!2s765%20Rue%20Jolivet%2C%20Laval%2C%20QC%20H7S%202L5!5e0!3m2!1sfr!2sca!4v1721923580703!5m2!1sfr!2sca" style="width:100%; height:200px;  border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section dynamique et attrayante -->
+    <section id="dynamic-section" class="py-16 bg-500 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-black">Rejoignez notre communauté</h2>
+            <p class="text-lg mb-8 text-black">Partagez vos expériences et découvrez les aventures des autres voyageurs.</p>
+            <a target="_blank" href="https://www.facebook.com" class="button text-white-500 px-6 py-3 rounded-full font-semibold ">Rejoignez-nous sur les réseaux sociaux</a>
+        </div>
+    </section>
+
+
+
+         <!-- Footer Component -->
+         <footer class="footer text-white h-auto">
+            <div class="container mx-auto py-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-center md:text-left mb-4 md:mb-0">&copy; 2024 Travel Agency. Tous droits réservés.</p>
+                <p class="text-center md:text-left mb-4 md:mb-0">Réalisé par: Ardric Kindji</p>
+                <div class="flex space-x-4 footer__social">
+                    <a target="_blank" href="https://www.facebook.com/" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://x.com/i/flow/login" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/accounts/login/" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+            <!-- Boîte de dialogue -->
+        <div id="chatBox" class="hidden fixed bottom-1 right-1 w-full sm:w-1/3 md:w-1/4  rounded-t-lg shadow-lg  p-4 ">
+            <div class="flex justify-between items-center mb-4">
+                <img src="https://randomuser.me/api/portraits/women/90.jpg" class="w-12 h-12 rounded-full mr-4"  alt="Image boîte de dialogue ">
+                <h3 class="text-lg font-semibold">Chat en ligne</h3>
+                <button id="closeChat" class="text-black-600 hover:text-black-900">&times;</button>
+            </div>
+            <div class="overflow-y-auto h-64">
+                Comment puis-je vous aider
+            </div>
+            <form id="chatForm" class="mt-4">
+                <input type="text" id="chatInput" class="w-full border rounded-md p-2" placeholder="Écrivez un message...">
+                <button type="submit" class="hidden"></button>
+            </form>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="script2.js"></script>
+</body>
+
+
+</html>
