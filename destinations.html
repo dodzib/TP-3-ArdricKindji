@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <link rel="stylesheet" type="text/css" href="style/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon/favicon.ico">
+   
+    <title>Travel Agency</title>
+
+</head>
+
+
+
+
+
+<body class="">
+    <!-- Header -->
+    <header class="h-30 fixed w-full z-50  shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="images/giphy.gif" alt="Le globe" id="img-high"><h1 class="text-2xl font-bold">Travel Agency.</h1>
+            </a>
+            <nav class="nav-links hidden md:flex flex-grow justify-center space-x-8">
+                <a href="index.html" class="header text-xl ">Accueil</a>
+                <a href="destinations.html" class="header text-xl active">Destinations</a>
+                <a href="circuits.html" class="header text-xl">Circuits</a>
+                <a href="contact.html" class="header text-xl">Contact</a>
+                <a href="tarifs.html" class="header text-xl">Tarifs</a>
+            </nav>
+            <div class="relative flex items-center flex-grow justify-end w-full md:w-auto md:flex-grow-0">
+                <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 w-full md:w-64 lg:w-80 border rounded-md focus:outline-none focus:ring-2 focus:ring-black-600">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M12 14l-4-4H6a6 6 0 1 1 1.41-1.41l4 4-4 4a1 1 0 0 1-1.41-1.41l4-4zM6 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="menu-icon flex flex-col justify-center items-center cursor-pointer md:hidden ml-4">
+                <div class="w-6 h-1 bg-gray-700 mb-1"></div>
+                <div class="w-6 h-1 bg-gray-700 mb-1"></div>
+                <div class="w-6 h-1 bg-gray-700"></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Section des cartes de destination -->
+    <section id="destinations" class="py-48 ">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Destinations</h2>
+
+            <p class="text-xl font-bold text-center mb-20">Nous offrons des destinations dans tous les continents du monde. Découvrez quelques unes de nos destinations. En cliquant sur
+                le lien En savoir plus de chaque destination, vous y trouverez une courte vidéo de présentation de ladite destination.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Carte de destination -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://photos.tui.fr/vnf/Produits/JPNCTSOL_mont-fuji-circuits-japon-tui.jpg?i10c=img.resize(width:780);img.crop(width:780,height:452)" alt="Destination 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Destination 1: La Chine</h3>
+                        <p class="text-600 mb-4 text-justify">La Chine est située à l’Est du continent Asiatique. Elle offre aussi un vaste panel 
+                            culturel aux multiples visages à découvrir.</p>
+                        <a  target="_blank" href="https://youtu.be/YK4YDMcAEP4" class=" chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+
+                
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://amatravelinternal.blob.core.windows.net/articles/images/bg-to-france-love.jpg" alt="Destination 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Destination 2: La France</h3>
+                        <p class="text-600 mb-4  text-justify">La france est un pays de l'europe de l'ouest. Elle est riche en culture, art, design, beauté et histoire et également connue comme 
+                            le pays de l'amour et de la romance .</p>
+                        <a target="_blank" href="https://youtu.be/grwC9_Divuw" class=" chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://media.ouest-france.fr/v1/pictures/58a5c65f9135ad7ea6ceabf7de609b62-rome-istock-vwalakte-539115110.jpg?client_id=cmsfront&sign=ad1ed5a961bbbb3e44c16c99a2d88c18c1de2ce49d947aefb1f37f4784f343f4" alt="Destination 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Destination 3: L'Italie</h3>
+                        <p class="text-600 mb-4  text-justify">L'Italie
+                            est un pays d'Europe méridionale comptant 20 régions divisées en 103 provinces. Il offre une palette de sensations des plus variées aux visiteurs 
+                            qui se donnent la peine de vivre à son rythme.</p>
+                        <a target="_blank" href="https://youtu.be/KsPO12JGI6g" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://alliancevisas.com/wp-content/uploads/2019/05/shutterstock_549375997.jpg" alt="Destination 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Destination 4: Le Canada</h3>
+                        <p class="text-600 mb-4  text-justify">Le Canada
+                            est le deuxième pays du monde en étendue et son territoire couvre près de 10 millions de kilomètres carrés. 
+                            Il propose à la fois des aventures inoubliables et des expériences culturelles raffinées.</p>
+                        <a target="_blank" href="https://youtu.be/G9uGaw-sKLE" class=" chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://i0.wp.com/objectif-terre.ca/wp-content/uploads/2017/03/Maroc.12.jpg?resize=490%2C276&ssl=1" alt="Destination 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Destination 5: Le Maroc</h3>
+                        <p class="text-600 mb-4  text-justify">Le Maroc est un pays d'Afrique du Nord. Il est possible de trouver toutes les gammes d’agrément en termes d’hébergement. Durant votre séjour vous pourrez
+                             goûter au luxe des riads ou de certaines maisons d’hôtes.</p>
+                        <a target="_blank" href="https://youtu.be/L0_eD-Ftz5Y" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://www.acs-ami.com/fr/blog/wp-content/uploads/2019/02/voyager-en-russie-1.jpg" alt="Destination 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Destination 6: La Russie</h3>
+                        <p class="text-600 mb-4  text-justify">Pays d'Europe orientale et d'Asie septentrionale, la Russie est le pays le plus vaste du monde. 
+                            N’oubliez pas de prendre le métro jusqu’à la Place Rouge, où vous découvrirez l’architecture extravagante de l’ancien empire russe.</p>
+                        <a target="_blank" href="https://youtu.be/3ZVMpeG7VxU" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section des recommandations -->
+    <section id="recommendations" class="py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Recommandations</h2>
+
+            <p class="text-xl font-bold text-center mb-12">Nous vous recommandons des destinations dans certains pays d'Afrique. Découvrez quelques unes de nos recommandations. Contactez-nous 
+                ,ou passez nous voir en présentielle pour plus d'informations.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Carte de recommandation -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMSs6XX9r2iw3s0fC1R2o30JBrWpjbOsL84w&s" alt="Recommandation 1" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Recommandation 1: Le Botswana</h3>
+                        <p class="text-600 mb-4  text-justify">La principale attraction touristique du pays résulte d'une particularité géologique. 
+                            Ce pays vous permettra de
+                            découvrir la nature
+                            sous tous ses angles. Les paysages varient selon les régions et sont toujours enrichis de la faune locale..</p>
+                        <a target="_blank" href="https://youtu.be/VWhgw_pxL9Y" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://infosnews.net/wp-content/uploads/2015/06/monogaga.jpg" alt="Recommandation 2" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Recommandation 2: La Côte d'Ivoire</h3>
+                        <p class="text-600 mb-4  text-justify">Ce pays d’Afrique de l’Ouest est deux fois plus petit que la France mais riche d’une incroyable diversité culturelle et naturelle. Une escapade immanquable
+                             pour faire l’expérience de la Dolce Vita à l’ivoirienne, sur les splendides plages du Golfe de Guinée ou encore partir à la recherche du très convoité Dollar des Sables.</p>
+                        <a href="https://youtu.be/_VrWeJov7jM" target="_blank" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/60/d6/c9/caption.jpg?w=500&h=400&s=1" alt="Recommandation 3" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Recommandation 3: Le Ghana</h3>
+                        <p class="text-600 mb-4  text-justify">Accra la capitale du Ghana fait partie des lieux incontournables à visiter. Rendez-vous sur la Place de l'Indépendance
+                            ,aussi appelée « Place de l'Étoile Noire », où vous pourrez admirer l'Arche de l'Indépendance ainsi que la Porte de l'Étoile Noire.</p>
+                        <a href=" 
+                        https://youtu.be/USiH35lRL1s" target="_blank" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpxsH7pq3pedt-eVZxLRbUlx44AFj48uPjqA&s" alt="Recommandation 4" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Recommandation 4: L'Île Maurice</h3>
+                        <p class="text-600 mb-4  text-justify">De la ravissante église de Cap Malheureux à l'iconique Morne Brabant, en passant par le ravissant jardin botanique de Pamplemousses et les temples hindouistes de Grand Bassin,
+                            l'île Maurice
+                            ne manque pas de sites aussi intéressants qu'attractifs. Sans oublier une gastronomie à se lécher les babines de plaisir !</p>
+                        <a href="https://youtu.be/bu_0G2gQXbg" target="_blank" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://www.lechotouristique.com/wp-content/uploads/2019/03/adobestock_169586438.jpg" alt="Recommandation 5" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Recommandation 5: Le Madagascar</h3>
+                        <p class="text-600 mb-4  text-justify">Madagascar est un pays unique. La quatrième plus grande île au monde est une destination fascinante ! Venez découvrir les richesses rares de l’île rouge, 
+                            la beauté de ses nombreux paysages, sa biodiversité d’exception, sa culture et ses habitants accueillants, et ses plages paradisiaques .</p>
+                        <a href="https://youtu.be/ZT1HgA1bV6Q" target="_blank" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://ecotour-voyage-nature.com/images/ecotour/blog/2-0-lac-rose-une-curiosite-naturelle-du-senegal.jpg" alt="Recommandation 6" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Recommandation 6: Le Sénégal</h3>
+                        <p class="text-600 mb-4  text-justify">Les infrastructures sont en plein boom : l’aéroport international Blaise Diagne ne désemplit pas, le TER est un grand succès, 
+                            le bus rapide à voie réservé de Dakar va démarrer sous peu et les routes sont belles pour parcourir le pays.</p>
+                        <a href="https://youtu.be/fY-mivvUOfo" target="_blank" class="chat text-500 hover:underline font-bold">En savoir plus</a>
+                    </div> 
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Section d'appel à l'action -->
+    <section id="cta" class="py-16 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center ">
+            <h2 class="text-3xl font-bold mb-4 text-black">Explorez Nos Destinations</h2>
+            <p class=" text-black mb-8">Découvrez des endroits incroyables à visiter avec notre guide complet.</p>
+            <a target="_blank" href="guide.html" class=" button text-white-500 px-6 py-3 rounded-full font-semibold">Commencez Maintenant</a>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer text-white h-auto">
+        <div class="container mx-auto py-6 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-center md:text-left mb-4 md:mb-0">&copy; 2024 Travel Agency. Tous droits réservés.</p>
+            <p class="text-center md:text-left mb-4 md:mb-0">Réalisé par: Ardric Kindji</p>
+            <div class="flex space-x-4 footer__social">
+                <a target="_blank" href="https://www.facebook.com/" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://x.com/i/flow/login" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.instagram.com/accounts/login/" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+       
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+
+
+</html>
+
