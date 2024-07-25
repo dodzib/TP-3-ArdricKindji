@@ -151,6 +151,9 @@ input[type=text] {
   color: #000; /* Couleur du texte dans l'input */
   padding-left: 2.5rem; /* Espace pour la loupe */
 }
+input[type=text]::-moz-placeholder {
+  color: black; /* Couleur du placeholder pour qu'il soit bien visible */
+}
 input[type=text]::placeholder {
   color: black; /* Couleur du placeholder pour qu'il soit bien visible */
 }
@@ -178,6 +181,11 @@ header {
   }
 }
 @media all and (max-width: 778px) {
+  #carouselExample {
+    margin-top: 70px;
+  }
+}
+@media all and (max-width: 450px) {
   #carouselExample {
     margin-top: 70px;
   }
