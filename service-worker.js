@@ -2,7 +2,7 @@
 const CACHE_NAME = 'static-cache-v2';
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
-    "login.html",
+    "offline.html",
    
    
    
@@ -63,7 +63,7 @@ self.addEventListener('fetch', (evt) => {
                 .catch(() => {
                     return caches.open(CACHE_NAME)
                     .then((cache) => {
-             return cache.match('login.html' );
+             return cache.match('offline.html' );
     });
     })
     );
