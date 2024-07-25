@@ -52,19 +52,19 @@
 "related_applications": [
     {
         "platform":"windows",
-        "url": "https://dodzib.github.io/demoWeb-2/"
+        "url": "https://dodzib.github.io/TP-3-ArdricKindji/"
     }
 ],
 "prefer_related_applications": false,
 "shortcuts": [
     {
-        "name":"Ts'pop",
+        "name":"TAgy",
         "url":"/index.html",
         "description":"Ce raccourci est pour les personnes qui l'utilisent en cas de besoin",
 
         "icons": [
           {
-            "src": "/demoWeb-2/images/raccourci.png",
+            "src": "/TP-3-ArdricKindji/images/raccourci.png",
             "sizes": "96x96",
             "type": "image/png"
           }
