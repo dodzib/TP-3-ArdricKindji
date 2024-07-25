@@ -63,7 +63,7 @@ self.addEventListener('fetch', (evt) => {
                 .catch(() => {
                     return caches.open(CACHE_NAME)
                     .then((cache) => {
-             return cache.match('offline.html' );
+             return cache.match('offline.html');
     });
     })
     );
