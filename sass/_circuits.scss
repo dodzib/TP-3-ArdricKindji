@@ -1,0 +1,22 @@
+@use 'variables' as*;
+
+#popular-circuits{
+    background-color: $primary-color;
+}
+
+#testimonials{
+    background-color: $secondary-color;
+}
+
+header{
+    background-color: $footer-color;
+    color: $primary-color;
+}
+
+.button{
+    background-color: $link-color;
+}
+
+.button:hover{
+    background-color: $footer-color;
+}

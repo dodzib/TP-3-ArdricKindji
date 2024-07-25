@@ -1,0 +1,43 @@
+@use 'variables' as*;
+
+
+.faq {
+    &__content {
+      display: grid;
+      gap: 2rem;
+    }
+  
+    &__item {
+      background-color: $secondary-color;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  
+    &__question {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+  
+    &__answer {
+      color: #4a5568;
+    }
+  }
+  
+  .thead, .reservation{
+    background-color: $secondary-color;
+  }
+
+  .faq{
+    background-color: $primary-color;
+  }
+
+  .button{
+    background-color: $link-color;
+    
+}
+
+.button:hover{
+    background-color: $footer-color;
+}

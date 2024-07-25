@@ -1,0 +1,38 @@
+@use 'variables' as*;
+/*-------------section confirmation formulaire-----------------------*/
+
+.section-contacts{
+    height: 700px;
+    .section-contacts__confirmation
+    {
+        text-align: justify;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+}
+
+.section-contacts h2{
+    font-size: 40px;
+}
+
+.span, .chat{
+    color:$link-color;
+}
+
+#contact-form, #dynamic-section{
+    background-color: $primary-color;
+}
+.button{
+    background-color: $link-color;
+    color: $primary-color;
+}
+
+.button:hover{
+    background-color: $footer-color;
+}
+
+
+#hours-location{
+    background-color: $secondary-color;
+}

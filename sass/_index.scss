@@ -1,0 +1,107 @@
+
+@use 'variables' as*;
+
+
+
+
+#img-high{
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+.active {
+      border-bottom: 4px solid $link-color;
+    .active:hover{
+        color: blue;
+        font-weight: bold;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+.steps, #about-u{
+    background-color: $primary-color;
+}
+
+#possibilities, #our-values{
+    background-color: $secondary-color;
+}
+.footer{
+    background-color: $footer-color;
+}
+.header{
+    font-weight: bold;
+}
+.header:hover{
+    font-weight: bold;
+    color: $destinations-color;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+.search-container input[type="text"] {
+    padding-left: 2.5rem; /* pour décaler le texte pour l'icône de recherche */
+}
+.search-container svg {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    color: black;
+    
+}
+
+/* SCSS pour styliser l'input de recherche */
+
+input[type="text"] {
+    &::placeholder {
+      color: black; /* Couleur du placeholder pour qu'il soit bien visible */
+    }
+  
+    color: #000; /* Couleur du texte dans l'input */
+    padding-left: 2.5rem; /* Espace pour la loupe */
+  
+    &:focus {
+      outline: none; /* Retirer le contour par défaut lors du focus */
+      border-color: $link-color; /* Changer la couleur de la bordure lors du focus */
+    }
+  }
+  
+  /* SCSS pour styliser l'icône de la loupe */
+  input[type="text"] + .absolute .inset-y-0 .left-0 .pl-3 .pointer-events-none {
+    color: #000; /* Couleur de l'icône de la loupe pour qu'elle soit bien visible */
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+@media all and (max-width: 1080px) {
+   #carouselExample{
+   margin-top: 70px;
+   }
+}
+
+@media all and (max-width: 778px) {
+    #carouselExample{
+    margin-top: 70px;
+    }
+ }
+ 

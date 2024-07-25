@@ -1,0 +1,47 @@
+/* BEM Methodology for the guide complet */
+@use 'variables' as*;
+
+.guide-complet__table-container {
+    margin-top: 20px;
+}
+
+.guide-complet__table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.guide-complet__header {
+    background-color: $secondary-color;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2px solid #e5e7eb;
+    font-size: 24px;
+}
+
+.guide-complet__row:nth-child(even) {
+    background-color: $secondary-color;
+}
+
+.guide-complet__cell {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.guide-complet__link {
+    color: $link-color;
+    text-decoration: none;
+}
+
+.guide-complet__link:hover {
+    text-decoration: underline;
+}
+
+.guide-complet{
+    background-color: $primary-color;
+}
+
+
+

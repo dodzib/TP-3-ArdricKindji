@@ -1,0 +1,9 @@
+@use 'variables' as*;
+
+.carousel-item {
+    display: none;
+}
+.carousel-item.active {
+    display: block;
+}
+
