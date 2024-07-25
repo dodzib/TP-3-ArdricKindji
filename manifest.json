@@ -1,0 +1,35 @@
+{
+"name": "boulart bread",
+"short_name": "BBr",
+"start_url": "/index.html",
+"display": "standalone",
+"description": "A description for your application",
+"lang": " fr",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#ffffff",
+"orientation": "any",
+"icons": [
+    {
+        "src": "/TP-1-Ardric/images/adric.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/TP-1-Ardric/images/helmert.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+    }
+],
+"screenshots": [
+    {
+        "src": "https://www.pwabuilder.com/assets/screenshots/",
+        "sizes": "2880x1800",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+]
+
+}
