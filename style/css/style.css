@@ -1,0 +1,298 @@
+@charset "UTF-8";
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input, .input-control.success textarea {
+  border-color: #09c372;
+}
+
+.input-control.error input, .input-control.error textarea {
+  border-color: red;
+}
+
+.input-control .errorMessage {
+  color: red;
+  font-size: 15px;
+  height: 13px;
+}
+
+.input-control .input-control__error {
+  color: red;
+  font-size: 15px;
+  height: 13px;
+}
+
+/* css boîte de dialogue*/
+#chatBox {
+  transition: transform 0.3s ease-in-out;
+  background-color: #A9ABAB;
+  border: 1px black solid;
+  width: 300px;
+}
+
+#chatBox.hidden {
+  transform: translateY(100%);
+}
+
+#chatBox.show {
+  transform: translateY(0);
+}
+
+/*-------------section confirmation formulaire-----------------------*/
+.section-contacts {
+  height: 700px;
+}
+.section-contacts .section-contacts__confirmation {
+  text-align: justify;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.section-contacts h2 {
+  font-size: 40px;
+}
+
+.span, .chat {
+  color: #F97316;
+}
+
+#contact-form, #dynamic-section {
+  background-color: #F9F9F7;
+}
+
+.button {
+  background-color: #F97316;
+  color: #F9F9F7;
+}
+
+.button:hover {
+  background-color: #344E6B;
+}
+
+#hours-location {
+  background-color: #4EC5BF;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+#img-high {
+  height: 30px;
+  float: left;
+  margin-right: 10px;
+}
+
+.active {
+  border-bottom: 4px solid #F97316;
+}
+.active .active:hover {
+  color: blue;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+.steps, #about-u {
+  background-color: #F9F9F7;
+}
+
+#possibilities, #our-values {
+  background-color: #4EC5BF;
+}
+
+.footer {
+  background-color: #344E6B;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.header:hover {
+  font-weight: bold;
+  color: #A9ABAB;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-container input[type=text] {
+  padding-left: 2.5rem; /* pour décaler le texte pour l'icône de recherche */
+}
+
+.search-container svg {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  color: black;
+}
+
+/* SCSS pour styliser l'input de recherche */
+input[type=text] {
+  color: #000; /* Couleur du texte dans l'input */
+  padding-left: 2.5rem; /* Espace pour la loupe */
+}
+input[type=text]::placeholder {
+  color: black; /* Couleur du placeholder pour qu'il soit bien visible */
+}
+input[type=text]:focus {
+  outline: none; /* Retirer le contour par défaut lors du focus */
+  border-color: #F97316; /* Changer la couleur de la bordure lors du focus */
+}
+
+/* SCSS pour styliser l'icône de la loupe */
+input[type=text] + .absolute .inset-y-0 .left-0 .pl-3 .pointer-events-none {
+  color: #000; /* Couleur de l'icône de la loupe pour qu'elle soit bien visible */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+@media all and (max-width: 1080px) {
+  #carouselExample {
+    margin-top: 70px;
+  }
+}
+@media all and (max-width: 778px) {
+  #carouselExample {
+    margin-top: 70px;
+  }
+}
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "crete round", serif, "Arial black", sans-serif;
+}
+
+p, a, form {
+  line-height: 1.25rem;
+  font-family: "Noto Sans", serif, "Arial black", sans-serif;
+}
+
+#destinations, #cta {
+  background-color: #F9F9F7;
+}
+
+#recommendations {
+  background-color: #4EC5BF;
+}
+
+#popular-circuits {
+  background-color: #F9F9F7;
+}
+
+#testimonials {
+  background-color: #4EC5BF;
+}
+
+header {
+  background-color: #344E6B;
+  color: #F9F9F7;
+}
+
+.button {
+  background-color: #F97316;
+}
+
+.button:hover {
+  background-color: #344E6B;
+}
+
+/* BEM Methodology for the guide complet */
+.guide-complet__table-container {
+  margin-top: 20px;
+}
+
+.guide-complet__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.guide-complet__header {
+  background-color: #4EC5BF;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 24px;
+}
+
+.guide-complet__row:nth-child(even) {
+  background-color: #4EC5BF;
+}
+
+.guide-complet__cell {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.guide-complet__link {
+  color: #F97316;
+  text-decoration: none;
+}
+
+.guide-complet__link:hover {
+  text-decoration: underline;
+}
+
+.guide-complet {
+  background-color: #F9F9F7;
+}
+
+.faq__content {
+  display: grid;
+  gap: 2rem;
+}
+.faq__item {
+  background-color: #4EC5BF;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.faq__question {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.faq__answer {
+  color: #4a5568;
+}
+
+.thead, .reservation {
+  background-color: #4EC5BF;
+}
+
+.faq {
+  background-color: #F9F9F7;
+}
+
+.button {
+  background-color: #F97316;
+}
+
+.button:hover {
+  background-color: #344E6B;
+}
