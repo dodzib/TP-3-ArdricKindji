@@ -2,7 +2,9 @@
 @use 'variables' as*;
 
 
-
+.cacher{
+    display: none;
+}
 
 #img-high{
     height: 30px;
