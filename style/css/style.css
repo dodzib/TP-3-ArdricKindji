@@ -82,6 +82,10 @@
   display: block;
 }
 
+.cacher {
+  display: none;
+}
+
 #img-high {
   height: 30px;
   float: left;
@@ -134,10 +138,6 @@
   display: inline-block;
 }
 
-.search-container input[type=text] {
-  padding-left: 2.5rem; /* pour décaler le texte pour l'icône de recherche */
-}
-
 .search-container svg {
   position: absolute;
   top: 50%;
@@ -149,7 +149,6 @@
 /* SCSS pour styliser l'input de recherche */
 input[type=text] {
   color: #000; /* Couleur du texte dans l'input */
-  padding-left: 2.5rem; /* Espace pour la loupe */
 }
 input[type=text]::-moz-placeholder {
   color: black; /* Couleur du placeholder pour qu'il soit bien visible */
