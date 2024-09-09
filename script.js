@@ -1,158 +1,131 @@
+/*---------------------formulaire--de contact----------------------------------------------------------------------*/
 
+const validateForm = () => {
 
+    let noError = true;
 
+    const origine = document.getElementById('origine');
+    const branch = document.getElementById('branch');
+    const agent = document.getElementById('agent');
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const codePostal = document.getElementById('codePostal');
+    const message = document.getElementById('message');
 
+    const origineValue = origine.value.trim();
+    const branchValue = branch.value.trim();
+    const agentValue = agent.value.trim();
+    const nameValue = name.value.trim();
+    const phoneValue = phone.value.trim();  // Correction ici (anciennement "message")
+    const emailValue = email.value.trim();
+    const codePostalValue = codePostal.value.trim();
+    const messageValue = message.value.trim();
 
+    // Expressions régulières pour les validations
+    const regexPhone = /^\d{3}-\d{3}-\d{4}$/; // Format pour téléphone: xxx-xxx-xxxx
+    const regexCodePostal = /^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/; // Format pour code postal canadien
 
-
-        /*---------------------formulaire--de contact----------------------------------------------------------------------*/
-
-
-        const validateForm = () => {
- 
-            let noError = true;
-     
-            const form = document.getElementById('form');
-            const origine = document.getElementById('origine');
-            const branch = document.getElementById('branch');
-            const agent = document.getElementById('agent');
-            const name = document.getElementById('name');
-            const phone = document.getElementById('phone');
-            const email = document.getElementById('email');
-            const codePostal = document.getElementById('codePostal');
-            const message = document.getElementById('message');
-       
-            
-            const origineValue = origine.value.trim();
-            const branchValue = branch.value.trim();
-            const agentValue = agent.value.trim();
-            const nameValue = name.value.trim();
-            const phoneValue = message.value.trim();
-            const emailValue = email.value.trim();
-            const codePostalValue = codePostal.value.trim();
-            const messageValue = message.value.trim();
-
-
-
-           
-            if (origineValue === '') {
-                setError(origine, 'Sélectionnez une région d\'origine');
-                noError = false;
-            } else {
-                setSuccess(origine);
-            }
-
-
-            if(branchValue === '') {
-                setError(branch, 'Sélectionnez un succursale');
-                    noError = false;
-            } else {
-                setSuccess(branch);
-            }
- 
- 
-            if(agentValue === '') {
-                setError(agent, 'Sélectionnez un agent');
-                    noError = false;
-            } else {
-                setSuccess(agent);
-            }
- 
- 
-            if(nameValue === '') {
-                setError(name, 'Un nom est requis');
-                    noError = false;
-            } else {
-                setSuccess(name);
-            }
- 
-
-
-            if(phoneValue === '') {
-                setError(phone, 'Le téléphone est requis');
-                    noError = false;
-            } else {
-                setSuccess(phone);
-            }
- 
-
- 
-            if(emailValue === '') {
-                setError(email, 'Le courriel est requis');
-                noError = false;
-            } else if (!isValidEmail(emailValue)) {
-                setError(email, 'Fournir une adresse valide');
-                noError = false;
-            } else {
-                setSuccess(email);
-            }
- 
- 
-            if(codePostalValue === '') {
-                setError(codePostal, 'Le code postal est requis');
-                    noError = false;
-            } else {
-                setSuccess(codePostal);
-            }
- 
-
- 
-            if(messageValue === '') {
-                setError(message, ' Un message est requis');
-                    noError = false;
-            } else {
-                setSuccess(message);
-            }
- 
-            return noError;
- 
- 
-        
-     
-        };
-
-        
-
-
-
-        const setError = (element, message) => {
-            const inputControl = element.parentElement;
-            const errorDisplay = inputControl.querySelector('.errorMessage');
- 
-            errorDisplay.innerText = message;
-            inputControl.classList.add('error');
-            inputControl.classList.remove('success');
- 
+    // Validation de l'origine
+    if (origineValue === '') {
+        setError(origine, 'Sélectionnez une région d\'origine');
+        noError = false;
+    } else {
+        setSuccess(origine);
     }
- 
-            const setSuccess = element => {
-            const inputControl = element.parentElement;
-            const errorDisplay = inputControl.querySelector('.errorMessage');
- 
-            errorDisplay.innerText = '';
-            inputControl.classList.add('success');
-            inputControl.classList.remove('error');
- 
- 
- 
-    };
- 
- 
- 
- 
- 
-    const isValidEmail = email => {
+
+    // Validation de la succursale
+    if(branchValue === '') {
+        setError(branch, 'Sélectionnez un succursale');
+        noError = false;
+    } else {
+        setSuccess(branch);
+    }
+
+    // Validation de l'agent
+    if(agentValue === '') {
+        setError(agent, 'Sélectionnez un agent');
+        noError = false;
+    } else {
+        setSuccess(agent);
+    }
+
+    // Validation du nom
+    if(nameValue === '') {
+        setError(name, 'Un nom est requis');
+        noError = false;
+    } else {
+        setSuccess(name);
+    }
+
+    // Validation du téléphone
+    if(phoneValue === '') {
+        setError(phone, 'Le téléphone est requis');
+        noError = false;
+    } else if (!regexPhone.test(phoneValue)) {
+        setError(phone, 'Veuillez entrer un numéro de téléphone valide (ex: 123-456-7890).');
+        noError = false;
+    } else {
+        setSuccess(phone);
+    }
+
+    // Validation de l'email
+    if(emailValue === '') {
+        setError(email, 'Le courriel est requis');
+        noError = false;
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Fournir une adresse valide');
+        noError = false;
+    } else {
+        setSuccess(email);
+    }
+
+    // Validation du code postal
+    if(codePostalValue === '') {
+        setError(codePostal, 'Le code postal est requis');
+        noError = false;
+    } else if (!regexCodePostal.test(codePostalValue)) {
+        setError(codePostal, 'Veuillez entrer un code postal valide (ex: A1A 1A1).');
+        noError = false;
+    } else {
+        setSuccess(codePostal);
+    }
+
+    // Validation du message
+    if(messageValue === '') {
+        setError(message, 'Un message est requis');
+        noError = false;
+    } else {
+        setSuccess(message);
+    }
+
+    return noError;
+};
+
+// Fonctions de gestion des erreurs et succès
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.errorMessage');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.errorMessage');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
+
+// Fonction pour valider l'email
+const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
-    }
- 
-
-   /*********** header*********************/
-
-   document.querySelector('.menu-icon').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('hidden');
-});
+}
 
 
 
